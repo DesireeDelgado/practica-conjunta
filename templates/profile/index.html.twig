@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mi Perfil{% endblock %}
+
+{% block body %}
+    <h1>Mi Perfil</h1>
+
+    <h2>Datos del Usuario</h2>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <p><strong>Nombre:</strong> {{ user.nombre }}</p>
+    <p><strong>Teléfono:</strong> {{ user.telefono }}</p>
+    <p><strong>Dirección:</strong> {{ user.direccion }}</p>
+
+    <h2>Mis Pedidos</h2>
+    {% if user.pedidos is empty %}
+        <p>No has realizado ningún pedido.</p>
+    {% else %}
+        <ul>
+            {% for pedido in user.pedidos %}
+                <li>
+                    Pedido #{{ pedido.id }} - {{ pedido.direccionEnvio }} - {{ pedido.metodoPago }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <a href="{{ path('app_logout') }}">Cerrar Sesión</a>
+{% endblock %}

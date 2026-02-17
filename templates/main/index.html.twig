@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bienvenido a Nuestra App de Comida{% endblock %}
+
+{% block body %}
+    <h1>Bienvenido</h1>
+    <p>Elige una categoría para empezar:</p>
+
+    {% if categorias is empty %}
+        <p>No hay categorías disponibles.</p>
+    {% else %}
+        <ul>
+            {% for categoria in categorias %}
+                <li>
+                    <strong>{{ categoria.nombre }}</strong>
+                    {# <a href="{{ path('app_categoria_show', {'id': categoria.id}) }}">Ver platos</a> #}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}
