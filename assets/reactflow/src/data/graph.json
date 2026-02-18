@@ -1,0 +1,939 @@
+{
+    "nodes": [
+        {
+            "id": "e-Categoria",
+            "position": {
+                "x": 420,
+                "y": 0
+            },
+            "data": {
+                "label": "Categoria"
+            },
+            "type": "entity"
+        },
+        {
+            "id": "e-CategoriaPlato",
+            "position": {
+                "x": 420,
+                "y": 110
+            },
+            "data": {
+                "label": "CategoriaPlato"
+            },
+            "type": "entity"
+        },
+        {
+            "id": "e-Favorito",
+            "position": {
+                "x": 420,
+                "y": 220
+            },
+            "data": {
+                "label": "Favorito"
+            },
+            "type": "entity"
+        },
+        {
+            "id": "e-Ingrediente",
+            "position": {
+                "x": 420,
+                "y": 330
+            },
+            "data": {
+                "label": "Ingrediente"
+            },
+            "type": "entity"
+        },
+        {
+            "id": "e-IngredientePlato",
+            "position": {
+                "x": 420,
+                "y": 440
+            },
+            "data": {
+                "label": "IngredientePlato"
+            },
+            "type": "entity"
+        },
+        {
+            "id": "e-Pedido",
+            "position": {
+                "x": 420,
+                "y": 550
+            },
+            "data": {
+                "label": "Pedido"
+            },
+            "type": "entity"
+        },
+        {
+            "id": "e-Plato",
+            "position": {
+                "x": 420,
+                "y": 660
+            },
+            "data": {
+                "label": "Plato"
+            },
+            "type": "entity"
+        },
+        {
+            "id": "e-PlatoPedido",
+            "position": {
+                "x": 420,
+                "y": 770
+            },
+            "data": {
+                "label": "PlatoPedido"
+            },
+            "type": "entity"
+        },
+        {
+            "id": "e-User",
+            "position": {
+                "x": 420,
+                "y": 880
+            },
+            "data": {
+                "label": "User"
+            },
+            "type": "entity"
+        },
+        {
+            "id": "route-0",
+            "position": {
+                "x": 210,
+                "y": 28
+            },
+            "data": {
+                "label": "_preview_error\n/_error/{code}.{_format}"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-1",
+            "position": {
+                "x": 210,
+                "y": 56
+            },
+            "data": {
+                "label": "_wdt_stylesheet\n/_wdt/styles"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-2",
+            "position": {
+                "x": 210,
+                "y": 84
+            },
+            "data": {
+                "label": "_wdt\n/_wdt/{token}"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-3",
+            "position": {
+                "x": 210,
+                "y": 112
+            },
+            "data": {
+                "label": "_profiler_home\n/_profiler/"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-4",
+            "position": {
+                "x": 210,
+                "y": 140
+            },
+            "data": {
+                "label": "_profiler_search\n/_profiler/search"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-5",
+            "position": {
+                "x": 210,
+                "y": 168
+            },
+            "data": {
+                "label": "_profiler_search_bar\n/_profiler/search_bar"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-6",
+            "position": {
+                "x": 210,
+                "y": 196
+            },
+            "data": {
+                "label": "_profiler_phpinfo\n/_profiler/phpinfo"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-7",
+            "position": {
+                "x": 210,
+                "y": 224
+            },
+            "data": {
+                "label": "_profiler_xdebug\n/_profiler/xdebug"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-8",
+            "position": {
+                "x": 210,
+                "y": 252
+            },
+            "data": {
+                "label": "_profiler_font\n/_profiler/font/{fontName}.woff2"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-9",
+            "position": {
+                "x": 210,
+                "y": 280
+            },
+            "data": {
+                "label": "_profiler_search_results\n/_profiler/{token}/search/results"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-10",
+            "position": {
+                "x": 210,
+                "y": 308
+            },
+            "data": {
+                "label": "_profiler_open_file\n/_profiler/open"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-11",
+            "position": {
+                "x": 210,
+                "y": 336
+            },
+            "data": {
+                "label": "_profiler\n/_profiler/{token}"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-12",
+            "position": {
+                "x": 210,
+                "y": 364
+            },
+            "data": {
+                "label": "_profiler_router\n/_profiler/{token}/router"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-13",
+            "position": {
+                "x": 210,
+                "y": 392
+            },
+            "data": {
+                "label": "_profiler_exception\n/_profiler/{token}/exception"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-14",
+            "position": {
+                "x": 210,
+                "y": 420
+            },
+            "data": {
+                "label": "_profiler_exception_css\n/_profiler/{token}/exception.css"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-15",
+            "position": {
+                "x": 210,
+                "y": 448
+            },
+            "data": {
+                "label": "app_categoria_index\n/categoria"
+            },
+            "type": "route"
+        },
+        {
+            "id": "c-App\\Controller\\CategoriaController",
+            "position": {
+                "x": 0,
+                "y": 1000
+            },
+            "data": {
+                "label": "App\\Controller\\CategoriaController"
+            },
+            "type": "controller"
+        },
+        {
+            "id": "route-16",
+            "position": {
+                "x": 210,
+                "y": 476
+            },
+            "data": {
+                "label": "app_categoria_new\n/categoria/new"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-17",
+            "position": {
+                "x": 210,
+                "y": 504
+            },
+            "data": {
+                "label": "app_categoria_show\n/categoria/{id}"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-18",
+            "position": {
+                "x": 210,
+                "y": 532
+            },
+            "data": {
+                "label": "app_categoria_edit\n/categoria/{id}/edit"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-19",
+            "position": {
+                "x": 210,
+                "y": 560
+            },
+            "data": {
+                "label": "app_categoria_delete\n/categoria/{id}"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-20",
+            "position": {
+                "x": 210,
+                "y": 588
+            },
+            "data": {
+                "label": "app_ingrediente_index\n/ingrediente"
+            },
+            "type": "route"
+        },
+        {
+            "id": "c-App\\Controller\\IngredienteController",
+            "position": {
+                "x": 0,
+                "y": 1240
+            },
+            "data": {
+                "label": "App\\Controller\\IngredienteController"
+            },
+            "type": "controller"
+        },
+        {
+            "id": "route-21",
+            "position": {
+                "x": 210,
+                "y": 616
+            },
+            "data": {
+                "label": "app_ingrediente_new\n/ingrediente/new"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-22",
+            "position": {
+                "x": 210,
+                "y": 644
+            },
+            "data": {
+                "label": "app_ingrediente_show\n/ingrediente/{id}"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-23",
+            "position": {
+                "x": 210,
+                "y": 672
+            },
+            "data": {
+                "label": "app_ingrediente_edit\n/ingrediente/{id}/edit"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-24",
+            "position": {
+                "x": 210,
+                "y": 700
+            },
+            "data": {
+                "label": "app_ingrediente_delete\n/ingrediente/{id}"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-25",
+            "position": {
+                "x": 210,
+                "y": 728
+            },
+            "data": {
+                "label": "app_main\n/"
+            },
+            "type": "route"
+        },
+        {
+            "id": "c-App\\Controller\\MainController",
+            "position": {
+                "x": 0,
+                "y": 1480
+            },
+            "data": {
+                "label": "App\\Controller\\MainController"
+            },
+            "type": "controller"
+        },
+        {
+            "id": "route-26",
+            "position": {
+                "x": 210,
+                "y": 756
+            },
+            "data": {
+                "label": "app_pedido_index\n/pedido"
+            },
+            "type": "route"
+        },
+        {
+            "id": "c-App\\Controller\\PedidoController",
+            "position": {
+                "x": 0,
+                "y": 1560
+            },
+            "data": {
+                "label": "App\\Controller\\PedidoController"
+            },
+            "type": "controller"
+        },
+        {
+            "id": "route-27",
+            "position": {
+                "x": 210,
+                "y": 784
+            },
+            "data": {
+                "label": "app_pedido_new\n/pedido/new"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-28",
+            "position": {
+                "x": 210,
+                "y": 812
+            },
+            "data": {
+                "label": "app_pedido_show\n/pedido/{id}"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-29",
+            "position": {
+                "x": 210,
+                "y": 840
+            },
+            "data": {
+                "label": "app_pedido_edit\n/pedido/{id}/edit"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-30",
+            "position": {
+                "x": 210,
+                "y": 868
+            },
+            "data": {
+                "label": "app_pedido_delete\n/pedido/{id}"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-31",
+            "position": {
+                "x": 210,
+                "y": 896
+            },
+            "data": {
+                "label": "app_plato_index\n/plato"
+            },
+            "type": "route"
+        },
+        {
+            "id": "c-App\\Controller\\PlatoController",
+            "position": {
+                "x": 0,
+                "y": 1800
+            },
+            "data": {
+                "label": "App\\Controller\\PlatoController"
+            },
+            "type": "controller"
+        },
+        {
+            "id": "route-32",
+            "position": {
+                "x": 210,
+                "y": 924
+            },
+            "data": {
+                "label": "app_plato_new\n/plato/new"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-33",
+            "position": {
+                "x": 210,
+                "y": 952
+            },
+            "data": {
+                "label": "app_plato_show\n/plato/{id}"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-34",
+            "position": {
+                "x": 210,
+                "y": 980
+            },
+            "data": {
+                "label": "app_plato_edit\n/plato/{id}/edit"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-35",
+            "position": {
+                "x": 210,
+                "y": 1008
+            },
+            "data": {
+                "label": "app_plato_delete\n/plato/{id}"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-36",
+            "position": {
+                "x": 210,
+                "y": 1036
+            },
+            "data": {
+                "label": "app_profile\n/perfil"
+            },
+            "type": "route"
+        },
+        {
+            "id": "c-App\\Controller\\ProfileController",
+            "position": {
+                "x": 0,
+                "y": 2040
+            },
+            "data": {
+                "label": "App\\Controller\\ProfileController"
+            },
+            "type": "controller"
+        },
+        {
+            "id": "route-37",
+            "position": {
+                "x": 210,
+                "y": 1064
+            },
+            "data": {
+                "label": "app_register\n/register"
+            },
+            "type": "route"
+        },
+        {
+            "id": "c-App\\Controller\\RegistrationController",
+            "position": {
+                "x": 0,
+                "y": 2120
+            },
+            "data": {
+                "label": "App\\Controller\\RegistrationController"
+            },
+            "type": "controller"
+        },
+        {
+            "id": "route-38",
+            "position": {
+                "x": 210,
+                "y": 1092
+            },
+            "data": {
+                "label": "app_login\n/login"
+            },
+            "type": "route"
+        },
+        {
+            "id": "c-App\\Controller\\SecurityController",
+            "position": {
+                "x": 0,
+                "y": 2200
+            },
+            "data": {
+                "label": "App\\Controller\\SecurityController"
+            },
+            "type": "controller"
+        },
+        {
+            "id": "route-39",
+            "position": {
+                "x": 210,
+                "y": 1120
+            },
+            "data": {
+                "label": "app_logout\n/logout"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-40",
+            "position": {
+                "x": 210,
+                "y": 1148
+            },
+            "data": {
+                "label": "app_user_index\n/user"
+            },
+            "type": "route"
+        },
+        {
+            "id": "c-App\\Controller\\UserController",
+            "position": {
+                "x": 0,
+                "y": 2320
+            },
+            "data": {
+                "label": "App\\Controller\\UserController"
+            },
+            "type": "controller"
+        },
+        {
+            "id": "route-41",
+            "position": {
+                "x": 210,
+                "y": 1176
+            },
+            "data": {
+                "label": "app_user_new\n/user/new"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-42",
+            "position": {
+                "x": 210,
+                "y": 1204
+            },
+            "data": {
+                "label": "app_user_show\n/user/{id}"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-43",
+            "position": {
+                "x": 210,
+                "y": 1232
+            },
+            "data": {
+                "label": "app_user_edit\n/user/{id}/edit"
+            },
+            "type": "route"
+        },
+        {
+            "id": "route-44",
+            "position": {
+                "x": 210,
+                "y": 1260
+            },
+            "data": {
+                "label": "app_user_delete\n/user/{id}"
+            },
+            "type": "route"
+        }
+    ],
+    "edges": [
+        {
+            "id": "edge-entity-CategoriaPlato-Categoria-6995993d30c37",
+            "source": "e-CategoriaPlato",
+            "target": "e-Categoria",
+            "label": 2
+        },
+        {
+            "id": "edge-entity-CategoriaPlato-Plato-6995993d30c3a",
+            "source": "e-CategoriaPlato",
+            "target": "e-Plato",
+            "label": 2
+        },
+        {
+            "id": "edge-entity-Favorito-Plato-6995993d30c3b",
+            "source": "e-Favorito",
+            "target": "e-Plato",
+            "label": 2
+        },
+        {
+            "id": "edge-entity-Favorito-User-6995993d30c3c",
+            "source": "e-Favorito",
+            "target": "e-User",
+            "label": 2
+        },
+        {
+            "id": "edge-entity-IngredientePlato-Ingrediente-6995993d30c3e",
+            "source": "e-IngredientePlato",
+            "target": "e-Ingrediente",
+            "label": 2
+        },
+        {
+            "id": "edge-entity-IngredientePlato-Plato-6995993d30c3f",
+            "source": "e-IngredientePlato",
+            "target": "e-Plato",
+            "label": 2
+        },
+        {
+            "id": "edge-entity-Pedido-User-6995993d30c40",
+            "source": "e-Pedido",
+            "target": "e-User",
+            "label": 2
+        },
+        {
+            "id": "edge-entity-PlatoPedido-Plato-6995993d30c42",
+            "source": "e-PlatoPedido",
+            "target": "e-Plato",
+            "label": 2
+        },
+        {
+            "id": "edge-entity-PlatoPedido-Pedido-6995993d30c43",
+            "source": "e-PlatoPedido",
+            "target": "e-Pedido",
+            "label": 2
+        },
+        {
+            "id": "edge-entity-User-Pedido-6995993d30c44",
+            "source": "e-User",
+            "target": "e-Pedido",
+            "label": 4
+        },
+        {
+            "id": "edge-route-route-15-c-App\\Controller\\CategoriaController",
+            "source": "route-15",
+            "target": "c-App\\Controller\\CategoriaController",
+            "label": "calls"
+        },
+        {
+            "id": "edge-route-route-16-c-App\\Controller\\CategoriaController",
+            "source": "route-16",
+            "target": "c-App\\Controller\\CategoriaController",
+            "label": "calls"
+        },
+        {
+            "id": "edge-route-route-17-c-App\\Controller\\CategoriaController",
+            "source": "route-17",
+            "target": "c-App\\Controller\\CategoriaController",
+            "label": "calls"
+        },
+        {
+            "id": "edge-route-route-18-c-App\\Controller\\CategoriaController",
+            "source": "route-18",
+            "target": "c-App\\Controller\\CategoriaController",
+            "label": "calls"
+        },
+        {
+            "id": "edge-route-route-19-c-App\\Controller\\CategoriaController",
+            "source": "route-19",
+            "target": "c-App\\Controller\\CategoriaController",
+            "label": "calls"
+        },
+        {
+            "id": "edge-route-route-20-c-App\\Controller\\IngredienteController",
+            "source": "route-20",
+            "target": "c-App\\Controller\\IngredienteController",
+            "label": "calls"
+        },
+        {
+            "id": "edge-route-route-21-c-App\\Controller\\IngredienteController",
+            "source": "route-21",
+            "target": "c-App\\Controller\\IngredienteController",
+            "label": "calls"
+        },
+        {
+            "id": "edge-route-route-22-c-App\\Controller\\IngredienteController",
+            "source": "route-22",
+            "target": "c-App\\Controller\\IngredienteController",
+            "label": "calls"
+        },
+        {
+            "id": "edge-route-route-23-c-App\\Controller\\IngredienteController",
+            "source": "route-23",
+            "target": "c-App\\Controller\\IngredienteController",
+            "label": "calls"
+        },
+        {
+            "id": "edge-route-route-24-c-App\\Controller\\IngredienteController",
+            "source": "route-24",
+            "target": "c-App\\Controller\\IngredienteController",
+            "label": "calls"
+        },
+        {
+            "id": "edge-route-route-25-c-App\\Controller\\MainController",
+            "source": "route-25",
+            "target": "c-App\\Controller\\MainController",
+            "label": "calls"
+        },
+        {
+            "id": "edge-route-route-26-c-App\\Controller\\PedidoController",
+            "source": "route-26",
+            "target": "c-App\\Controller\\PedidoController",
+            "label": "calls"
+        },
+        {
+            "id": "edge-route-route-27-c-App\\Controller\\PedidoController",
+            "source": "route-27",
+            "target": "c-App\\Controller\\PedidoController",
+            "label": "calls"
+        },
+        {
+            "id": "edge-route-route-28-c-App\\Controller\\PedidoController",
+            "source": "route-28",
+            "target": "c-App\\Controller\\PedidoController",
+            "label": "calls"
+        },
+        {
+            "id": "edge-route-route-29-c-App\\Controller\\PedidoController",
+            "source": "route-29",
+            "target": "c-App\\Controller\\PedidoController",
+            "label": "calls"
+        },
+        {
+            "id": "edge-route-route-30-c-App\\Controller\\PedidoController",
+            "source": "route-30",
+            "target": "c-App\\Controller\\PedidoController",
+            "label": "calls"
+        },
+        {
+            "id": "edge-route-route-31-c-App\\Controller\\PlatoController",
+            "source": "route-31",
+            "target": "c-App\\Controller\\PlatoController",
+            "label": "calls"
+        },
+        {
+            "id": "edge-route-route-32-c-App\\Controller\\PlatoController",
+            "source": "route-32",
+            "target": "c-App\\Controller\\PlatoController",
+            "label": "calls"
+        },
+        {
+            "id": "edge-route-route-33-c-App\\Controller\\PlatoController",
+            "source": "route-33",
+            "target": "c-App\\Controller\\PlatoController",
+            "label": "calls"
+        },
+        {
+            "id": "edge-route-route-34-c-App\\Controller\\PlatoController",
+            "source": "route-34",
+            "target": "c-App\\Controller\\PlatoController",
+            "label": "calls"
+        },
+        {
+            "id": "edge-route-route-35-c-App\\Controller\\PlatoController",
+            "source": "route-35",
+            "target": "c-App\\Controller\\PlatoController",
+            "label": "calls"
+        },
+        {
+            "id": "edge-route-route-36-c-App\\Controller\\ProfileController",
+            "source": "route-36",
+            "target": "c-App\\Controller\\ProfileController",
+            "label": "calls"
+        },
+        {
+            "id": "edge-route-route-37-c-App\\Controller\\RegistrationController",
+            "source": "route-37",
+            "target": "c-App\\Controller\\RegistrationController",
+            "label": "calls"
+        },
+        {
+            "id": "edge-route-route-38-c-App\\Controller\\SecurityController",
+            "source": "route-38",
+            "target": "c-App\\Controller\\SecurityController",
+            "label": "calls"
+        },
+        {
+            "id": "edge-route-route-39-c-App\\Controller\\SecurityController",
+            "source": "route-39",
+            "target": "c-App\\Controller\\SecurityController",
+            "label": "calls"
+        },
+        {
+            "id": "edge-route-route-40-c-App\\Controller\\UserController",
+            "source": "route-40",
+            "target": "c-App\\Controller\\UserController",
+            "label": "calls"
+        },
+        {
+            "id": "edge-route-route-41-c-App\\Controller\\UserController",
+            "source": "route-41",
+            "target": "c-App\\Controller\\UserController",
+            "label": "calls"
+        },
+        {
+            "id": "edge-route-route-42-c-App\\Controller\\UserController",
+            "source": "route-42",
+            "target": "c-App\\Controller\\UserController",
+            "label": "calls"
+        },
+        {
+            "id": "edge-route-route-43-c-App\\Controller\\UserController",
+            "source": "route-43",
+            "target": "c-App\\Controller\\UserController",
+            "label": "calls"
+        },
+        {
+            "id": "edge-route-route-44-c-App\\Controller\\UserController",
+            "source": "route-44",
+            "target": "c-App\\Controller\\UserController",
+            "label": "calls"
+        }
+    ]
+}
