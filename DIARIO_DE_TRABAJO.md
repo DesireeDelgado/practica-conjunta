@@ -29,6 +29,30 @@ Se ha llevado a cabo el diseño y modelado relacional del sistema, traduciendo e
 
 **Nota:** Estas dos sesiones han sido realizadas al completo en conjunto por los cuatro integrantes.
 
+### Sesión 3 - [19-02-2026] - Frontend React y Componente Footer
+
+**Responsable:** Desiree
+
+Inicio del desarrollo del frontend en React con la implementación del componente Footer y la configuración de recursos estáticos.
+
+**Detalles técnicos implementados en esta sesión:**
+
+- **Recursos Estáticos:**
+    - Creación de la carpeta `/frontend/src/img` para organizar imágenes del proyecto.
+    - Incorporación del logo de la aplicación (`logo.png`).
+
+- **Desarrollo de Componentes:**
+    - Implementación del componente `Footer.jsx` con estructura semántica completa.
+    - Aplicación de diseño responsive usando Tailwind CSS con breakpoints adaptativos.
+    - Configuración de layout flexible que adapta la presentación según el tamaño de pantalla:
+        - **Móvil:** Layout centrado en una columna para todos los elementos.
+        - **Desktop:** Layout horizontal con cuatro columnas alineadas a la izquierda.
+
+- **Diseño y UX:**
+    - Estructura del footer con secciones: Logo/Descripción, Descubre, Compañía, Soporte.
+    - Copyright centrado en la sección inferior del footer.
+
+
 ---
 
 _Este diario se actualizará con los progresos de cada sesión de trabajo._
