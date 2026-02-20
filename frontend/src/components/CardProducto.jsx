@@ -1,50 +1,12 @@
 function CardProducto({ producto }) {
-  // Datos por defecto en caso de que la API no esté disponible
+  // Adaptamos los datos de la API de TheMealDB al formato del componente
   const {
-    id = 0,
-    nombre = 'Producto sin nombre',
-    descripcion = 'Sin descripción disponible',
-    imagen = 'https://via.placeholder.com/300x200',
-    precio = 0,
-    tiempo = 0,
-    dificultad = 'Medium',
-    etiqueta = null,
-    esFavorito = false
+    idMeal = 0,
+    strMeal = 'Producto sin nombre',
+    strMealThumb = 'https://via.placeholder.com/300x200',
+    strArea = 'Internacional',
+    precio = 15.99
   } = producto || {};
-
-  // Determinar el icono y color según la dificultad
-  const getDificultadInfo = () => {
-    switch(dificultad.toLowerCase()) {
-      case 'easy':
-        return { icon: 'emoji_emotions', color: 'text-green-500', label: 'Easy' };
-      case 'hard':
-      case 'chef level':
-        return { icon: 'whatshot', color: 'text-red-500', label: 'Chef Level' };
-      default:
-        return { icon: 'whatshot', color: 'text-orange-400', label: 'Medium' };
-    }
-  };
-
-  const dificultadInfo = getDificultadInfo();
-
-  // Determinar el estilo de la etiqueta según su tipo
-  const getEtiquetaClasses = () => {
-    if (!etiqueta) return '';
-    
-    const tipo = etiqueta.toLowerCase();
-    const baseClasses = 'absolute top-3 left-3 px-2 py-1 rounded text-xs font-bold uppercase tracking-wider';
-    
-    const estilos = {
-      'popular': 'bg-white/90 dark:bg-black/80 backdrop-blur-sm text-gray-900 dark:text-white',
-      'value': 'bg-green-100 text-green-800',
-      'spicy': 'bg-red-100 text-red-800',
-      'family': 'bg-blue-100 text-blue-800',
-      'keto': 'bg-purple-100 text-purple-800',
-      'chef pick': 'bg-yellow-100 text-yellow-800'
-    };
-    
-    return `${baseClasses} €{estilos[tipo] || 'bg-gray-100 text-gray-800'}`;
-  };
 
   const handleAddToCart = () => {
     // Función para añadir al carrito (pendiente de implementar)
@@ -61,26 +23,22 @@ function CardProducto({ producto }) {
       {/* Imagen del producto */}
       <div className="relative h-48 overflow-hidden group">
         <img 
-          alt={nombre} 
+          alt={strMeal} 
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-          src={imagen}
+          src={strMealThumb}
         />
         
-        {/* Etiqueta (Popular, Value, Spicy, etc.) */}
-        {etiqueta && (
-          <div className={getEtiquetaClasses()}>
-            {etiqueta}
-          </div>
-        )}
+        {/* Badge con el origen del plato */}
+        <div className="absolute top-3 left-3 bg-white/90 dark:bg-black/80 backdrop-blur-sm px-2 py-1 rounded text-xs font-bold text-gray-900 dark:text-white uppercase tracking-wider">
+          {strArea}
+        </div>
         
         {/* Botón de favorito */}
         <button 
           onClick={handleToggleFavorite}
           className="absolute top-3 right-3 p-2 bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-400 hover:text-red-500 transition-colors"
         >
-          <span className="material-icons text-sm">
-            {esFavorito ? 'favorite' : 'favorite_border'}
-          </span>
+          <span className="material-icons text-sm">favorite_border</span>
         </button>
       </div>
 
@@ -89,20 +47,20 @@ function CardProducto({ producto }) {
         {/* Título */}
         <div className="flex justify-between items-start mb-2">
           <h2 className="text-xl font-bold text-gray-900 dark:text-white hover:text-primary cursor-pointer transition-colors line-clamp-1">
-            {nombre}
+            {strMeal}
           </h2>
         </div>
 
         {/* Descripción */}
         <p className="text-sm text-gray-500 dark:text-gray-400 mb-6 line-clamp-2">
-          {descripcion}
+          Delicious {strArea} cuisine
         </p>
 
         {/* Precio y botón de añadir */}
         <div className="mt-auto flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-800">
           <div className="flex flex-col">
             <span className="text-xs text-gray-500">Kit Price</span>
-            <span className="text-lg font-bold text-primary">€{precio.toFixed(2)}</span>
+            <span className="text-lg font-bold text-primary">{precio.toFixed(2)}€</span>
           </div>
           <button 
             onClick={handleAddToCart}
