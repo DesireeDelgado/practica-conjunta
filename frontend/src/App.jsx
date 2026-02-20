@@ -1,20 +1,26 @@
-import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { CartProvider } from './context/CartContext';
 import Home from './pages/Home';
-import Footer from './components/Footer'
-import Header from './components/Header'
+import Cart from './pages/Cart';
+import History from './pages/History';
+import Footer from './components/Footer';
+import Header from './components/Header';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Header />
-      <main>
+    <CartProvider>
+      <BrowserRouter>
+        <Header />
+        <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/history" element={<History />} />
         </Routes>
       </main>
       <Footer />
     </BrowserRouter>
+    </CartProvider>
   )
 }
 

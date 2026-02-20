@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useCart } from '../context/CartContext';
 
 // Componente del Encabezado (Header)
-const Header = ({ cartCount = 0, totalPrice = "0.00" }) => {
+const Header = () => {
+  const { cartCount, totalPrice } = useCart();
   // Estado para controlar si el buscador movil esta abierto
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const logoUrl = "../img/logo.png";
@@ -12,14 +15,14 @@ const Header = ({ cartCount = 0, totalPrice = "0.00" }) => {
         <div className="flex justify-between items-center h-20">
           
           {/* Logo del restaurante (solo icono en movil, completo en desktop) */}
-          <div className="flex-shrink-0 flex items-center gap-3 cursor-pointer">
+          <Link to="/" className="flex-shrink-0 flex items-center gap-3 cursor-pointer">
             <img 
               alt="" 
               className="w-auto h-16" 
               src={logoUrl} 
             />
             <span className="hidden md:block font-bold text-xl tracking-tight text-gray-900">Come y <span className="text-primary">Calla</span></span>
-          </div>
+          </Link>
 
           {/* Buscador para ordenadores (Desktop) */}
           <div className="hidden md:flex flex-1 max-w-lg mx-8">
@@ -37,13 +40,13 @@ const Header = ({ cartCount = 0, totalPrice = "0.00" }) => {
 
           {/* Iconos de acciones (Perfil, Carrito, Menu) */}
           <div className="flex items-center gap-4">
-            {/* Perfil de usuario */}
-            <button className="p-2 rounded-full hover:bg-primary/10 transition-colors relative group">
+            {/* Perfil de usuario (Historial MOCKEADO ahora apuntará a history) */}
+            <Link to="/history" className="p-2 rounded-full hover:bg-primary/10 transition-colors relative group">
               <span className="material-icons text-black group-hover:text-primary active:text-primary transition-colors">person_outline</span>
-            </button>
+            </Link>
 
             {/* Bolsa de la compra estilizada (tipo pastilla) */}
-            <button className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full hover:bg-primary/20 transition-all relative group">
+            <Link to="/cart" className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full hover:bg-primary/20 transition-all relative group">
               <span className="material-icons text-primary transition-colors">shopping_bag</span>
               <span className="text-primary font-bold text-sm sm:text-base">${totalPrice}</span>
               {cartCount > 0 && (
@@ -51,7 +54,7 @@ const Header = ({ cartCount = 0, totalPrice = "0.00" }) => {
                   {cartCount}
                 </span>
               )}
-            </button>   
+            </Link>   
 
             {/* Botón para moviles (abre el buscador) */}
             <button 
