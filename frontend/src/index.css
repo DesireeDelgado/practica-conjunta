@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #ef4444; /* Puedes cambiar este rojo por el color principal de tu marca */
+  --color-primary: #F3731C; /* Color naranja principal de la marca */
+  --color-primary-dark: #D66317; /* Versión más oscura para hovers */
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
