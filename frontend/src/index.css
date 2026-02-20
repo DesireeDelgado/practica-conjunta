@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #ef4444; /* Puedes cambiar este rojo por el color principal de tu marca */
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
