@@ -1,17 +1,18 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
 import Footer from './components/Footer'
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col">
-      <div className="flex-grow flex items-center justify-center flex-col py-20">
-        <h1 className="text-3xl font-bold text-gray-800">
-          ¡Proyecto limpio y listo! 🚀
-        </h1>
-        <h2 className="text-2xl font-bold text-gray-800">a topeeeeee</h2>
-      </div>
+    <BrowserRouter>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </main>
       <Footer />
-    </div>
+    </BrowserRouter>
   )
 }
 
