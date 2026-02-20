@@ -1,14 +1,16 @@
-import { useState } from 'react'
-
+import { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center flex-col">
-      <h1 className="text-3xl font-bold text-gray-800">
-        ¡Proyecto limpio y listo! 🚀
-      </h1>
-      <h2 className="text-2xl font-bold text-gray-800">a topeeeeee</h2>
-    </div>
+    <BrowserRouter>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </main>
+    </BrowserRouter>
   )
 }
 
