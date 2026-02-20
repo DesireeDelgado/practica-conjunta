@@ -12,61 +12,90 @@ const OrderDetails = () => {
   const [recipeData, setRecipeData] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // Simulamos la llamada a la API
   useEffect(() => {
-    // Cuando el backend esté listo, aquí iría el fetch real:
-    // fetch(`/api/recipes/${id}`)
-    //   .then(res => res.json())
-    //   .then(data => setRecipeData(data));
-    
-    setTimeout(() => {
-      setRecipeData({
-        id: id || '1',
-        category: 'Indian',
-        title: 'Chicken Tikka Masala',
-        description: 'A rich, creamy, and spicy curry that brings the authentic taste of India straight to your kitchen. Perfectly balanced spices with tender chicken.',
-        imageAlt: 'Rich and creamy Chicken Tikka Masala in a copper bowl with naan bread',
-        imageSrc: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAPFLZpBLnaE6szvVv2BXj2joeDU9kO2xPxAY5zJT5LR38MieYPUZ0DJ6lAP4C7cJZyXBXF4e1tra0PfnPOXKhf_5fU-J6ZYw1OwWdtISNT6-7pTWIENPMV6zYvgr19eWJrtk4LCS7CLLPWjVxNCQW0LzEkrmcKZQ8tiidUSCJ5A5batFo5LuiIT-Aw1ankpG7MSSCFoauYvF8CYjxrKgWV2ov_kmo0YEObmnPJjJ730ZVZeTiyRYrfF6dM-g74PVMKM6nmM2wCJSM',
-        isBestseller: true,
-        rating: '4.9',
-        reviewsCount: '2.1k',
-        prepTime: '45 min',
-        calories: '620 kcal',
-        difficulty: 'Medium',
-        ingredients: [
-          { name: 'Chicken Breast', amount: '500g', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDlMz8RZjWDH3PzlEeaR6PYNaWkw7IVlgQ-OqWIYFz_i2UXsEtVLZykTjcveTRQiglPc6Q-D_wFfKg2zZiFIyfsKhuSuxZdKu-lbfZ0JyA88Ww-9VuOaTYGMF8nnrYoz_x7R5tU7_-Lf127193Ai9s5qYvASjr2U7CoWptlnrtfowi2NZVQr6sTE3t0h2AyK-5aILAAOY2wQFNx0uFd39WbVvCzDhrldGRS0TzfY9LzR7Ztbg5Qvr3DIsmbzpOk3YkpHk23YfpFEE4' },
-          { name: 'Basmati Rice', amount: '300g', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCz0H9NSNwDKagsEazS9qUB_Nom6dbWouKjIePrdLtKZOL0K597XFabhbw4Wu5IhNbek2YtoxqfC_WHxC5_WjF8RkrssBvZOUl6uXMiOAsGTcKVmDgXSS3rjQaJy53MW1RkENVEpR7tLWzF0uaCuFqkLTuBB2NIDD27e7uCOWLlfaw3W41yu--oJbRcGTJLSut4BI12TRWVDFGWV6CgiMolxp56cgtSCvdKD69FchcA0rZ31Rcak7_5WBYBs-zT0mK2H_y5osuO4wM' },
-          { name: 'Greek Yogurt', amount: '200g', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuChD89Qk725CQxJLoGHZ0QzNM-6UH4P7Q3ioMCIBzN-fEx6we2IAQC9sQGJXT95Z7atOB_yephnx32PjRBt4L7wyljun5twnLtSM9bKvHd7hhBqVSLbyJRJoika6DUFaCmnWS5et-sUFmp7faC4qFIyjXItCyvXKQDF31MxPUH4PYF8zZh05heYXtEcyNPepZPvMzCCa4e4jApCakKgMPK0mE3bOJQveG3kgc8rQd7BXhu_Nr3EI2VExeH6Dz41VF9Z1SobXM-yyzY' },
-          { name: 'Tomato Puree', amount: '1 Can', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAK-33m8GOKCyhtshDrKVB2pOJJ-XNbzvSoUJHjjijSS61DJ987s3DmMFE20Gqc2mh_MQHL7zmgZpGYlZ2UrzldoxDWFG4erldKrD8PDlAs2luDgZGM3gRlcFy6UZnFQEde18JQrYtRkELH-zzu0WoZ2SxozqHaKkzyQuaWYEB-ZUZZNIcVbbNO7bShWj18ewyIYYCexY-AcAWdfaLkCl2DVEhADzdVz8F7jHCXpDHLeBUWmuQVz1Bu4_CjznhUuPa0fuz0o8KBAQY' },
-          { name: "Chef's Spice Mix", amount: '1 Sachet', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCxJfFr1PeGTd_wCjYK-XNnemOzuaL0NtC2CM4Y0EGYI68y7qck2X9y0T5t2Z3JoZp0-qvU6CaFSvm3-ZGYQyBF606HvysEC8SHPup52GhsLLReTmENYbE4pGHlfqXCURE2d5Ny5IP4NwpJcxUMFHdsaEZwH7hN2R2PWmXgtSsCAGaLgHc9a2nGEdwS-qs4Hr_9H4-RKl4sx6mJuIurokKEhIoBMa_jHD8buqr3iCcO5t6gAelUx8ezcKKfGOSKC7P9-322QqFrw-M' },
-          { name: 'Fresh Coriander', amount: '1 Bunch', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD1Ec4IqlOGQjAFROZjmPD2SrQnOluBeiEivSUJm8nTJsiprmjvN4JjFrQRah2AkU2qbRa-E_Pm_Lc0Vn6OQmTj_0lKAQOX4MJZqgQmaeZrKvc6LPdfQH-_S2wQcOnKDEsTtZCk8GaJEwbjrP3XBgjGhRG6RUVpNfsz6csZ6Hwfd_rncFQW5ZsFc9-Ed0HeUbfN-ALMKRxXuKp47Bfd4SLZcqdod-D9dR6yIt7BNk8GviIo6th4S3ghHPlf7Xiy6rJKyE59R6bEvBo' }
-        ],
-        pantryCheck: "You'll need olive oil, salt, pepper, and a large frying pan.",
-        steps: [
-          { title: 'Marinate the Chicken', description: 'Cut the chicken into bite-sized pieces. In a bowl, mix the yogurt and half the spice blend. Add the chicken and coat well. Let it sit while you prep the rest.' },
-          { title: 'Cook the Rice', description: 'Rinse the basmati rice until the water runs clear. Cook in boiling salted water for 10-12 minutes until fluffy. Drain and keep warm.' },
-          { title: 'Simmer the Sauce', description: 'Sear the chicken in a hot pan. Add the tomato puree and remaining spices. Simmer for 15 minutes until the sauce thickens and chicken is cooked through.' }
-        ],
-        purchaseParams: {
-          servings: 2,
-          portions: 4,
-          price: 18.50,
-          originalPrice: 22.00,
-          discount: '15% Off',
-          deliveryInfo: {
-            urgency: 'Order within 2h 15m',
-            time: '7:00 PM today'
+    const fetchRecipe = async () => {
+      try {
+        setLoading(true);
+        const mealId = id || '52772'; // Teriyaki Chicken por defecto si no hay ID
+        // Conectar al backend de Symfony puerto 8000, que actúa de proxy a TheMealDB e inyecta el precio.
+        const res = await fetch(`http://localhost:8000/api/meals/lookup.php?i=${mealId}`);
+        if (!res.ok) throw new Error('Error al contactar con la API del servidor');
+        
+        const data = await res.json();
+        if (!data.meals || !data.meals[0]) throw new Error('No se encontró el plato');
+        const meal = data.meals[0];
+
+        // Mapear dinámicamente hasta 20 ingredientes
+        const ingredientsList = [];
+        for (let i = 1; i <= 20; i++) {
+          const name = meal[`strIngredient${i}`];
+          const amount = meal[`strMeasure${i}`];
+          if (name && name.trim() !== '') {
+            ingredientsList.push({
+              name: name,
+              amount: amount || '',
+              // TheMealDB provee una url de imagen de ingredientes base
+              img: `https://www.themealdb.com/images/ingredients/${encodeURIComponent(name)}-Small.png`
+            });
           }
         }
-      });
-      setLoading(false);
-    }, 500); // delay de medio segundo para simular red
+
+        setRecipeData({
+          id: meal.idMeal,
+          category: meal.strCategory || 'General',
+          title: meal.strMeal,
+          description: meal.strInstructions 
+            ? meal.strInstructions.substring(0, 180) + '...' 
+            : 'Una deliciosa receta internacional lista para tu paladar.',
+          imageAlt: meal.strMeal,
+          imageSrc: meal.strMealThumb,
+          isBestseller: true,
+          rating: '4.8',
+          reviewsCount: '1.2k',
+          prepTime: '30 min',
+          calories: '550 kcal',
+          difficulty: 'Medium',
+          ingredients: ingredientsList,
+          pantryCheck: "Olive oil, salt, pepper.",
+          purchaseParams: {
+            servings: 2,
+            portions: 4,
+            price: parseFloat(meal.precio || '15.00'),
+            originalPrice: parseFloat(meal.precio || '15.00') + 4,
+            discount: '15% Off',
+            deliveryInfo: {
+              urgency: 'Order within 2h 15m',
+              time: '7:00 PM today'
+            }
+          }
+        });
+      } catch (error) {
+        console.error('Error fetching recipe data:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchRecipe();
   }, [id]);
 
   if (loading) {
     return (
       <div className="flex justify-center items-center min-h-screen">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-500"></div>
+      </div>
+    );
+  }
+
+  if (!recipeData) {
+    return (
+      <div className="flex flex-col justify-center items-center min-h-screen text-center">
+        <span className="material-icons text-6xl text-red-500 mb-4">error_outline</span>
+        <h2 className="text-2xl font-bold text-gray-800 mb-2">Oops! No pudimos cargar la receta.</h2>
+        <p className="text-gray-500">Asegúrate de que el backend de Symfony está encendido en el puerto 8000.</p>
+        <button onClick={() => window.location.reload()} className="mt-6 px-6 py-2 bg-orange-500 text-white rounded-full font-bold hover:bg-orange-600">
+          Reintentar
+        </button>
       </div>
     );
   }
