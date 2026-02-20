@@ -34,7 +34,7 @@ function Footer() {
             </ul>
           </div>
           
-          <div className="text-center md:text-left">
+          <div className="text-center md:text-left col-span-2 sm:col-span-1">
             <h4 className="font-bold text-gray-900 dark:text-white mb-4">Soporte</h4>
             <ul className="space-y-2 text-sm text-gray-500 dark:text-gray-400">
               <li><a className="hover:text-primary transition-colors" href="#">Centro de Ayuda</a></li>
