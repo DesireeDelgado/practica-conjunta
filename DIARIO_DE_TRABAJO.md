@@ -53,6 +53,18 @@ Inicio del desarrollo del frontend en React con la implementación del component
     - Copyright centrado en la sección inferior del footer.
 
 
+### Sesión 4 - [20-02-2026] - Integración API TheMealDB y Visualización de Categorías
+
+**Responsable:** Desiree
+
+Integración completa del frontend React con la API externa TheMealDB a través del proxy de Symfony, con adaptación de componentes para mostrar datos dinámicos de categorías de comida.
+
+**Detalles técnicos implementados en esta sesión:**
+
+- Implementación del componente `Categoria.jsx` y `cardProducto.jsx` con su diseño.
+- Configuración de estilos de colores primarios con variables CSS adicionales para backgrounds y fuentes integradas.
+- Vista de categorías completamente funcional mostrando datos en tiempo real de la API TheMealDB, con interfaz responsive y diseño coherente con la identidad visual del proyecto.
+
 ---
 
 _Este diario se actualizará con los progresos de cada sesión de trabajo._
