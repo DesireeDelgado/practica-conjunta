@@ -1,10 +1,15 @@
 import { Link } from 'react-router-dom';
 
+/**
+ * Used in Home.jsx for listing featured categories
+ */
+
 export function CategoryCard({category, descriptor}) {
     // Category should be capitalized for the URL, e.g. Seafood
     const categoryPath = `/categoria/${category}`;
+    // And in lowercase for the img, e.g. seafood (a bit risky but works if imgs are consistently named)
     category = category.toLowerCase();
-    const imgPath = `../src/img/${category}.png`; // This is a bit risky but works if imgs are consistently named
+    const imgPath = `../src/img/${category}.png`;
 
     return (
         <Link to={categoryPath}>
@@ -12,7 +17,7 @@ export function CategoryCard({category, descriptor}) {
                 <div>
                     <img src={imgPath} className="max-w-16 rounded-full" />
                 </div>
-                <h3 className="font-bold">{descriptor}</h3>
+                <h3 className="font-bold text-dark">{descriptor}</h3>
             </article>
         </Link>
     );

@@ -249,4 +249,26 @@ Implementación completa de la funcionalidad de **Favoritos** para usuarios aute
     *Además, cada uno participará en la demo de manera dinámica explicando la parte que ha hecho.
 ---
 
+**Responsable:** Ángeles
+
+**Detalles técnicos adicionales implementados en esta sesión:**
+
+**Creación del componente DishCard** para automatizar un poco la adición de platos destacados a Home.
+
+---
+
+**Responsable:** Desirée
+
+**Planificación de la exposición del proyecto:**
+
+Se ha llevado a cabo una reunión grupal para organizar la presentación final, acordando el siguiente reparto de puntos clave:
+
+- **Pepe:** Arquitectura del proyecto.
+- **Desirée:** Introducción de la idea de proyecto y organización con el control de versiones Git.
+- **Ángeles:** Diseño de la aplicación y guía de estilos.
+- **Rubén:** Funcionalidad de favoritos y header.
+
+_Además, cada uno participará en la demo de manera dinámica explicando la parte técnica que ha implementado._
+
+-----
 _Este diario se actualizará con los progresos de cada sesión de trabajo._
